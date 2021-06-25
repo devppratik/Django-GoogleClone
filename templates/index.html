@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Clone</title>
+{% load static %}
+  <link rel="stylesheet" href="{% static "googleclone/styles.css"%}">
+</head>
+<body>
+    
+<div class="top-toolbar">
+<nav>
+<a href="#">+You</a>
+<a href="#">Gmail</a>
+<a href="#">Images</a>
+<img src="https://dl.dropboxusercontent.com/u/25441638/1.5-google-clone/images/grid.png" />
+<a href="#"><button class="signin">Sign In</button></a>
+</nav>
+</div>
+<div class="search">
+<div class="logo">
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+</div>
+<form method="POST" action="search">
+        {% csrf_token %}
+<input class="search-bar" type="text" name="search" autofocus x-webkit-speech/>
+<div class="search-nav">
+<div class="search-button">
+<a href="#"><button type="submit">Google Search</button></a>
+</form>
+<a href="#"><button>I'm Feeling Lucky</button></a>
+</div>
+</div>
+</div>
+<div class="footer">
+<footer class="bottom-toolbar">
+<nav class="footer-left">
+<a href="#">Advertising</a>
+<a href="#">Business</a>
+<a href="#">About</a>
+</nav>
+<nav class="footer-right">
+<a href="#">New Privacy &amp; Terms</a>
+<a href="#">Settings</a>
+</nav>
+</footer>
+</div>
+</body>
+</html>
